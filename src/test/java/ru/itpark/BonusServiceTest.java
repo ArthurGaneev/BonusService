@@ -26,6 +26,12 @@ class BonusServiceTest {
 
             assertEquals(100, bonus);
         }
+        {
+            BonusService sercice = new BonusService();
+            int bonus = sercice.calculateBonus(1_000, 0);
+
+            assertEquals(50, bonus);
+        }
 
 
     }
