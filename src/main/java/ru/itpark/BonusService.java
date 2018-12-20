@@ -21,7 +21,6 @@ public class BonusService {
         if ( purchaseAmountOfPrevious >= initialPurchaseAmountBlueCard && purchaseAmountOfPrevious <= moneyBlueCardLimit ) {
             return resultBlueCard;
         }
-
         if (purchaseAmountOfPrevious >= initialPurchaseAmountSilverCard && purchaseAmountOfPrevious <= moneySilverCardLimit) {
             return resultSilverCard;
         }
