@@ -8,7 +8,7 @@ public class BonusService {
         int quantityBonusSilverCard = 70;
         int quantityBonusGoldCard = 100;
 
-        int initialPurchaseAmountBlueCard = 1;
+        int initialPurchaseAmountBlueCard = 0;
         int initialPurchaseAmountSilverCard = 15_001;
 
         int moneyBlueCardLimit = 15_000;
@@ -18,11 +18,14 @@ public class BonusService {
         int resultGoldCard = (purchaseAmount * quantityBonusGoldCard) / fixedAmountOfBonuses;
 
 
-        if (purchaseAmountOfPrevious >= initialPurchaseAmountBlueCard && purchaseAmountOfPrevious <= moneyBlueCardLimit) {
+        if ( purchaseAmountOfPrevious >= initialPurchaseAmountBlueCard && purchaseAmountOfPrevious <= moneyBlueCardLimit ) {
             return resultBlueCard;
-        } else if (purchaseAmountOfPrevious >= initialPurchaseAmountSilverCard && purchaseAmountOfPrevious <= moneySilverCardLimit) {
+        }
+
+        if (purchaseAmountOfPrevious >= initialPurchaseAmountSilverCard && purchaseAmountOfPrevious <= moneySilverCardLimit) {
             return resultSilverCard;
-        } else {
+        }
+        else {
             return resultGoldCard;
         }
     }
